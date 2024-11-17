@@ -1,16 +1,12 @@
-import { apiKey } from './config.js'; // Assuming config.js is in the same directory
+import { apiKey } from './config.js'; 
 
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 
-// Your remaining code ...
 
 
-// Create a function to handle API key retrieval (optional)
 function getApiKey() {
-  // You can check for environment variables or other logic here
-  // If using environment variables, uncomment the following line:
-  // return process.env.GEMINI_API_KEY;
-  return apiKey; // Assuming you have it in config.js
+  
+  return apiKey; 
 }
 
 const genAI = new GoogleGenerativeAI(getApiKey());
@@ -30,8 +26,7 @@ const generationConfig = {
 async function run(prompt) {
   const chatSession = model.startChat({
     generationConfig,
-    // safetySettings: Adjust safety settings
-    // See https://ai.google.dev/gemini-api/docs/safety-settings
+   
     history: [
     ],
   });
